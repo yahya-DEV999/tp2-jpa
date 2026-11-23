@@ -46,3 +46,28 @@ l'implémentation (save, findAll, findById, deleteById…). Méthodes ajoutées 
 - `findByPriceGreaterThan(double)` : produits plus chers qu'un prix donné ;
 - `search(String)` : même recherche écrite en **JPQL** avec `@Query`.
 
+## Étape 5 – Test des opérations de gestion des produits
+Un `CommandLineRunner` dans `Tp2JpaApplication` exécute au démarrage :
+1. ajout de 4 produits ;
+2. consultation de tous les produits ;
+3. consultation d'un produit (`findById`) ;
+4. recherche (par mot-clé, par prix, en JPQL) ;
+5. mise à jour d'un produit ;
+6. suppression d'un produit.
+
+Un `RestController` permet aussi de voir les données : `/products`, `/products/{id}`,
+`/products/search?keyword=`. Le test JUnit `ProductRepositoryTest` (`@DataJpaTest`)
+vérifie les opérations CRUD.
+
+### Captures
+<!-- Ajouter les captures dans un dossier captures/ -->
+![Console](captures/console.png)
+![Liste JSON](captures/products-json.png)
+![Console H2](captures/h2-console.png)
+
+## Lancer le projet
+1. IntelliJ → File → Open → `tp2-jpa`
+2. Lancer `Tp2JpaApplication`
+3. http://localhost:8085/products — console H2 : http://localhost:8085/h2-console
+   (JDBC URL `jdbc:h2:mem:products-db`, utilisateur `sa`, sans mot de passe)
+
