@@ -18,3 +18,15 @@ tp2-jpa
  └── src/main/java/ma/mundiapolis/tp2/Tp2JpaApplication.java
 ```
 
+## Étape 2 – Entité JPA `Product`
+L'entité `Product` est annotée `@Entity`. L'identifiant `id` est la clé primaire
+(`@Id`) générée automatiquement (`@GeneratedValue(strategy = IDENTITY)`).
+Lombok génère les getters/setters, les constructeurs, le builder et `toString()`.
+
+| Attribut | Type |
+|---|---|
+| id | Long |
+| name | String |
+| price | double |
+| quantity | int |
+
