@@ -39,3 +39,10 @@ Dans `application.properties` :
 
 La configuration MySQL est fournie en commentaire.
 
+## Étape 4 – Interface `ProductRepository` (Spring Data)
+`ProductRepository` hérite de `JpaRepository<Product, Long>` : Spring Data génère
+l'implémentation (save, findAll, findById, deleteById…). Méthodes ajoutées :
+- `findByNameContainsIgnoreCase(String)` : recherche par mot-clé (méthode dérivée du nom) ;
+- `findByPriceGreaterThan(double)` : produits plus chers qu'un prix donné ;
+- `search(String)` : même recherche écrite en **JPQL** avec `@Query`.
+
