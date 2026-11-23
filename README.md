@@ -30,3 +30,12 @@ Lombok génère les getters/setters, les constructeurs, le builder et `toString(
 | price | double |
 | quantity | int |
 
+## Étape 3 – Configuration de l'unité de persistance
+Dans `application.properties` :
+- base **H2 en mémoire** `jdbc:h2:mem:products-db` ;
+- console H2 activée sur `/h2-console` ;
+- `spring.jpa.hibernate.ddl-auto=create` : Hibernate crée la table `product` au démarrage ;
+- `spring.jpa.show-sql=true` : affiche les requêtes SQL générées.
+
+La configuration MySQL est fournie en commentaire.
+
