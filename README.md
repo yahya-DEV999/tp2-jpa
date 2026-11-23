@@ -59,12 +59,6 @@ Un `RestController` permet aussi de voir les données : `/products`, `/products/
 `/products/search?keyword=`. Le test JUnit `ProductRepositoryTest` (`@DataJpaTest`)
 vérifie les opérations CRUD.
 
-### Captures
-<!-- Ajouter les captures dans un dossier captures/ -->
-![Console](captures/console.png)
-![Liste JSON](captures/products-json.png)
-![Console H2](captures/h2-console.png)
-
 ## Lancer le projet
 1. IntelliJ → File → Open → `tp2-jpa`
 2. Lancer `Tp2JpaApplication`
